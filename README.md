@@ -14,6 +14,9 @@ HowToUse
   SharedCvMat shared_img("capture_image", 640, 480, 3, false);
   
   cv::Mat image;
+  cv::VideoCapture capture;
+  capture.open(0);
+  capture >> image;
   
   // イメージを共有メモリへアップロード
   shared_img.upload(image);
